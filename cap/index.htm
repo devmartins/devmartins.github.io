@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>Primeira Página GitHub Pages.</p>
+<head>
+	<style>
+		h1 {
+			font-size: 52px;
+		}
+		#centro {
+			width:800px;			
+			position:absolute;			
+			left:50%;		
+			margin-left:-400px;
+		}
+	</style>
+</head>
+<body style="font-family: Arial;font-size:18px;">
+	<div id="centro">
+	<h1>CAP</h1>
+	<h2>EF6 Scaffold for PostgreSQL</h2>
+	<p style="padding-bottom: 10px;">Cap is a cli tool that generates POCO classes from a PostgreSQL database.</p>
+	
+	<b>Requirements:</b>
+	
+	<ol style="padding-bottom: 10px;">
+		<li>Visual Studio 2015</li>
+		<li>PostgreSQL 9.x</li>
+	</ol>
+		
+	<b>Usage:</b>
+	<div style="padding-left: 20px;">
+		<p>Open "Package Manager Console" and type</p>
+		
+		<p style="font-weight:bold">cap -u user -p password -d database -f model_folder</p>
+		
+		<p>Add generated files in the project.</p>
+		
+		<p>P.S. Use cap without parameters to see other options.</p>	
+	</div>
+	Enjoy.
+	@devmartins
+	<div>
 </body>
 </html>
