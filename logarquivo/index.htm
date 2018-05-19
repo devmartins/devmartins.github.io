@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		h1 {
+			font-size: 52px;
+		}
+		#centro {
+			width:800px;			
+			position:absolute;			
+			left:50%;		
+			margin-left:-400px;
+		}
+	</style>
+</head>
+<body style="font-family: Arial;font-size:18px;">
+	<div id="centro">
+	<h1>LogArquivo</h1>	
+	<p style="padding-bottom: 10px;">Biblioteca para gerar log em arquivo txt.</p>
+	
+	<p><b>Utilização</b></p>
+	
+	Inclua a chave GerarLog no web.config:<br><br>
+	&lt;appSettings&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&lt;add key="GerarLog" value="true"/&gt;<br>
+    &lt;/appSettings&gt;<br>
+	<br>
+    Use os métodos da classe Log:<br>
+	<br>
+	Log.Excecao //Para logar exceções<br>
+	Log.Erro //Para logar com uma string
+</body>
+</html>
