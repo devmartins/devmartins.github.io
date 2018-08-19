@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		h1 {
+			font-size: 52px;
+		}
+		#centro {
+			width:800px;			
+			position:absolute;			
+			left:50%;		
+			margin-left:-400px;
+		}
+	</style>
+</head>
+<body style="font-family: Arial;font-size:18px;">
+	<div id="centro">
+	<h1>ReflectionEX</h1>	
+	<p style="padding-bottom: 10px;">Biblioteca com métodos de extensão para o tipo Object, para facilitar a programação com reflection no c#.</p>
+	
+	<p><b>Métodos</b></p>
+
+	//Lê o valor da propriedade<br>
+	object ObterValor(string nome)<br>	
+	object ObterValor(params string[] nomes) //Você pode indicar mais de um nome<br>
+	<br>
+	//Lê o valor de uma enumeração<br>
+	object ObterValorEnum(string nome)<br>
+	<br>
+	//Define o valor de uma propriedade<br>
+	void DefinirValor(string nome, object valor)<br>
+	void DefinirValor(string[] nomes, object valor ) //Você pode indicar mais de um nome<br>
+	<br>
+	//Executa um método no objeto<br>
+	object Exec(Func&lt;MethodInfo, bool&gt; exp, params object[] parametros)<br>
+	object Exec(string nomeMetodo, params object[] parametros)<br>
+	object Exec(Func&lt;MethodInfo, bool&gt; exp, Type tipo, object[] parametros) //Executa um método com um parâmetro genérico<br>
+	object Exec(string nomeMetodo, Type tipo, object[] parametros)<br>
+	object ExecStatic(Func&lt;MethodInfo, bool&gt; exp, object[] parametros) //Executa método estático<br>
+	object ExecStatic(string nomeMetodo, object[] parametros)<br>
+	<br>
+	//Retorna o tipo de uma propriedade<br>
+	Type ObterTipo(string nome)<br>
+	<br>
+    //Retorna o tipo interno de uma coleção<br>
+	Type ObterTipoColecao(string nome)<br>
+	<br>
+	//Cria instância da propriedade<br>
+	object Instanciar(string nome)<br>
+	<br>
+	//Converte uma coleção para IEnumerable&lt;object&gt;<br>
+	IEnumerable&lt;object&gt; Cast(string nome)<br>
+
+</body>
+</html>
