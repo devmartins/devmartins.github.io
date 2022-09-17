@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Controle Medicação</title>
+    <style>
+        #conteudo {
+            font-size: 100px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 180px;
+        }
+
+        #conteudoBtn {
+            text-align: center;
+        }
+
+        .clsBtnRegistroHorario {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="conteudo"></div>
+    <div id="conteudoBtn">
+        <button class="clsBtnRegistroHorario" onclick="registrarHorario()">Registrar</button>
+    </div>
+    <script>
+        function registrarHorario() {
+            let data = new Date().toLocaleDateString("pt-br");
+            localStorage.setItem("ultimaHora", data);
+            document.getElementById("conteudo").innerText = data;
+        }
+
+        function obterHorario() {
+            let registro = localStorage.getItem("ultimaHora");
+            if (registro !== null) {
+                document.getElementById("conteudo").innerText = registro;
+            }
+            else {
+                document.getElementById("conteudo").innerText = "NENHUM";
+            }
+        }
+
+        obterHorario();
+    </script>
+</body>
+</html>
